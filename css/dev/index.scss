@@ -1,0 +1,440 @@
+@import 'base';
+//header颜色
+$g-color:#10ba9f;
+//body颜色
+$b-color:#eaf0f0;
+//
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont.eot');
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+  url('iconfont.woff') format('woff'),
+  url('iconfont.ttf') format('truetype'),
+  url('iconfont.svg#iconfont') format('svg');
+}
+//
+body{
+    background: $b-color;
+    background-image: url($img-path+'back.png');
+    background-position: center 50%;
+    background-size:3.07rem 4.52rem ;
+    background-repeat:no-repeat;
+    overflow: hidden;
+    position: relative;
+}
+.write{
+        width:1.31rem;
+        height:1.31rem;
+        border-radius: 50%;
+        background:$g-color;
+        position: fixed;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom:0.2rem;
+        font-family: "iconfont";
+        font-size: 0.54rem;
+        text-align: center;
+        line-height: 1.31rem;
+        color:#fff;
+    }
+.zong{
+    transform: translateX(0);
+    overflow: hidden;
+}
+.zong1{
+    transform: translateX(0);
+}
+.header{
+    background: $g-color;
+    height: 0.93rem;
+    width: 100%;
+    position: relative;
+    padding: 0 0.23rem;
+    color:#fff;
+    .l{
+        float: left;
+        font-family:"iconfont" ;
+        width: .4rem;
+        height:.4rem;
+        @include top-bottom;
+        line-height: .4rem;
+        text-align: center;
+        left: 0.23rem;
+        font-size: .4rem;
+    }
+    .m{
+        @include center;
+        width: 2rem;
+        height:.4rem;
+        line-height: .4rem;
+        text-align: center;
+        margin: auto;
+        font-size: .4rem;
+    }
+    .r{
+        float: right;
+        font-family:"iconfont" ;
+        @include top-bottom;
+        width: .4rem;
+        height:.4rem;
+        line-height: .4rem;
+        text-align: center;
+        right: 0.23rem;
+        font-size: .4rem;
+    }
+}
+@keyframes wan{
+    0%{
+        height: 0;
+        display: none;
+    }
+    100%{
+        height:1.28rem ;
+       display: block;
+    }
+}
+.wan{
+    animation:wan 0.2s ease both;
+}
+@keyframes wan1{
+    0%{
+        height:1.28rem;
+    }
+    100%{
+        height:0 ;
+    }
+}
+.wan1{
+    animation:wan1 0.2s ease both;
+}
+#wan{
+    width: 100%;
+    background: #d9dbda;
+    div{
+        width: 50%;
+        height: 100%;
+        font-size: 0.34rem;
+        line-height: 1.28rem;
+        text-align: center;
+        float: left;
+        color: #4c5c5b;
+        position: relative;
+        display: none;
+        .san1{
+            border-top:0;
+            border-bottom:0.23rem solid #fff;
+            border-left: 0.23rem solid #d9dbda;
+            border-right: 0.23rem solid #d9dbda;
+            position: absolute;
+            left: 50%;
+            margin-left: -0.25rem;
+            bottom: 0;
+            width: 0;height: 0;
+            display: none;
+        }
+    }
+}
+.zi{
+    color:#0cbb9e;
+}
+#main{
+    width: 100%;
+    height:11.07rem;
+    position:relative;
+    
+    ul#mn{
+        width: 100%;
+        overflow: hidden;
+        li{
+            width: 100%;
+            height:1.46rem;
+            position: relative;
+            border-bottom: 2px solid #e0e6e6;
+            padding-left: 0.56rem;
+            font-size: 0.32rem;
+            line-height: 1.46rem;
+            color:#495e5c;
+            .co{
+                width: 0.16rem;
+                height:100%;
+                background: #f2756f;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+}
+@keyframes lg-r{
+    0%{
+       transform: translateX(-2.35rem); 
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes lg-l{
+    0%{
+       transform: translateX(0); 
+    }
+    100%{
+        transform: translateX(-2.35rem);
+    }
+}
+@keyframes lg-r-h{
+    0%{
+       transform: translateX(0); 
+    }
+    100%{
+        transform: translateX(2.35rem);
+    }
+}
+@keyframes lg-l-h{
+    0%{
+       transform: translateX(2.35rem); 
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.lg-r{
+    animation:lg-r 0.2s ease both;
+}
+.lg-l{
+    animation:lg-l 0.2s ease both;
+}
+.lg-r-h{
+    animation:lg-r-h 0.2s ease both;
+}
+.lg-l-h{
+    animation:lg-l-h 0.2s ease both;
+}
+//左边固定
+#left-g{
+    width: 2.35rem;
+    height: 12.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-2.35rem);
+    .header-l{
+        width: 2.35rem;
+        background: $g-color;
+        height: 0.93rem;
+        
+    }
+    div.gudingk{
+        position: relative;
+        width: 100%;
+        height:11.08rem;
+        overflow: hidden;
+        ul{
+        width: 100%;
+        margin-top: 0;
+        overflow: hidden;
+        li{
+            width: 100%;
+            height: 1.76rem;
+            position: relative;
+            font-size: 0.4rem;
+            line-height: 1.76rem;
+            text-align: center;
+            color: #FFF;
+            p{
+              font-size: 0.5rem;
+              font-family:"iconfont" ;  
+            }
+            span{
+                font-size:0.26rem ;
+                line-height: 1.76rem;
+            }
+            .ss{
+                border-left: 0;
+                border-right:0.26rem solid #fff;
+                position: absolute;
+                top: 50%;
+                margin-top: -0.22rem;
+                right:0;
+                display: none;
+            }
+        }
+    }
+    }
+    
+}
+//添加
+@keyframes run-l{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes run-r{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.run-l{
+    animation:run-l 0.2s ease both;
+}
+.run-r{
+    animation:run-r 0.2s ease both;
+}
+#tj{
+    width: 100%;
+    height: 12.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: $b-color;
+    overflow: hidden;
+//  display: none;
+ transform: translateX(100%);
+ float: left;
+    .header1{
+    background: $g-color;
+    height: 0.93rem;
+    width: 100%;
+    position: relative;
+    padding: 0 0.23rem;
+    color:#fff;
+    .l{
+        float: left;
+        font-family:"iconfont" ;
+        width: .4rem;
+        height:.4rem;
+        @include top-bottom;
+        line-height: .4rem;
+        text-align: center;
+        left: 0.23rem;
+        font-size: .4rem;
+    }
+    .m{
+        @include center;
+        width: 2rem;
+        height:.4rem;
+        line-height: .4rem;
+        text-align: center;
+        margin: auto;
+        font-size: .4rem;
+    }
+    .r{
+        float: right;
+        font-family:"iconfont" ;
+        @include top-bottom;
+        width: .4rem;
+        height:.4rem;
+        line-height: .4rem;
+        text-align: center;
+        right: 0.23rem;
+        font-size: .4rem;
+        }
+    }
+    .main1{
+        position: relative;
+        width: 100%;
+        height:11.07rem;
+        ul{
+        height:1.41rem ;
+        width: 16rem;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        }
+        .tex{
+            width: 100%;
+//          height:9.66rem;
+            padding: 0.7rem 0.5rem;
+            border:none;
+            background: $b-color;
+            outline-style: none;
+        }
+        li{
+            width: 2rem;
+            height: 1.41rem;
+            float: left;
+            text-align: center;
+            line-height: 1.41rem;
+            color: #fff;
+            position: relative;
+            div{
+                font-family: "iconfont";
+                @include center;
+                font-size: 0.45rem;
+                
+            }
+            .xss{
+                border-top:0.3rem solid #fff;
+                border-bottom:0;
+                position: absolute;
+                left: 50%;
+                margin-left: -0.3rem;
+                top: 0;
+                width:0;
+                height:0;
+                display: none;
+            }
+        }
+        .str{
+            width: 2.4rem;
+            height:1.2rem;
+            position: absolute;
+            right: 0;
+            bottom:1.41rem;
+            div{
+                float: left;
+                width: 50%;
+                height:100%;
+                font-size: 0.62rem;
+                line-height: 1.2rem;
+                text-align: center;
+                color: #13b79e;
+                font-family: "iconfont";
+            }
+        }
+    }
+    
+}
+@keyframes div-d{
+    0%{
+       transform: translateY(0); 
+    }
+    50%{
+       transform: translateY(0.1rem); 
+    }
+    100%{
+       transform: translateY(0);  
+    }
+}
+.div-d{
+    animation: div-d 1s ease infinite;
+}
+@keyframes del-l{
+    0%{
+       transform: translateX(0); 
+    }
+    100%{
+         transform: translateX(-100%); 
+    }
+}
+.del-l{
+    animation:del-l .2s ease both;
+}
+@keyframes del-r{
+    0%{
+       transform: translateX(0); 
+    }
+    100%{
+         transform: translateX(100%); 
+    }
+}
+.del-r{
+    animation:del-r .2s ease both;
+}
