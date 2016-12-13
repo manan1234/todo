@@ -77,18 +77,31 @@ $(function(){
 	$("#left-g ul").on("touchstart",function(e){
 		sy=e.originalEvent.changedTouches[0].clientY;
 	})
-	$("#left-g ul").on("touchmove",function(e){
+	$("#left-g ul").on("touchend",function(e){
 		var mx=e.originalEvent.changedTouches[0].clientY-sy;
-		$("#left-g ul").css({"marginTop":mx+"px"});
+		if(mx<-50){
+			$("#left-g ul").animate({"marginTop":-130},1000,function(){
+			});
+		}
+		else if(mx>50&&$("#left-g ul").css("marginTop")!=0){
+			$("#left-g ul").animate({"marginTop":0},1000);
+		}
+		
 	})
 	//添加页面左右滑动
 	var sx;
 	$(".main1 ul").on("touchstart",function(e){
 		sx=e.originalEvent.changedTouches[0].clientX;
 	})
-	$(".main1 ul").on("touchmove",function(e){
+	$(".main1 ul").on("touchend",function(e){
 		var mx=e.originalEvent.changedTouches[0].clientX-sx;
-		$(".main1 ul").css({"marginLeft":mx+"px"});
+		if(mx<-50){
+			$(".main1 ul").animate({"marginLeft":-360},1000,function(){
+			});
+		}
+		else if(mx>50&&$(".main1 ul").css("marginLeft")!=0){
+			$(".main1 ul").animate({"marginLeft":0},1000);
+		}
 	})
 //	添加页面中固定
 	//三角形
